@@ -34,13 +34,13 @@ Below is the BibTex for citing this version of the code.
 The goal of this software is to compare the performance of stochastic linearized proximal method of multipliers (**SLPMM**) proposed in the [paper](https://doi.org/10.1287/ijoc.2021.0248) with several existing algorithms for minimizing a convex expectation function subject to a set of inequality convex expectation constraints. A preprint of this paper is available on [arXiv](https://arxiv.org/abs/2106.11577).
 
 Three numerical examples are tested in this software: 
--Neyman-Person classification, 
--stochastic quadratically constrained quadratical programming (QCQP), 
--second-order stochastic dominance (SSD)  constrained portfolio optimization.
+- Neyman-Pearson classification, 
+- stochastic quadratically constrained quadratic programming (QCQP), 
+- second-order stochastic dominance (SSD)  constrained portfolio optimization.
 
 This software contains three folders: `NP_classification`, `QCQP`, `SSD`. 
-- `NP_classification`: solves Neyman-Person classification problems.
-- `QCQP`: solves stochastic quadratically constrained quadratical programs.
+- `NP_classification`: solves Neyman-Pearson classification problems.
+- `QCQP`: solves stochastic quadratically constrained quadratic programs.
 - `SSD`: solves second-order stochastic dominance (SSD)  constrained portfolio optimization problems.
 
 The tested existing algorithms include:
@@ -55,18 +55,18 @@ stochastic programs. *Math. Program. Comput.* 14(2):319–363.
 - **PALEM**: Dentcheva D, Martinez G, Wolfhagen E (2016) Augmented Lagrangian methods for solving optimization
 problems with stochastic-order constraints. *Oper. Res.* 64(6):1451–1465.
 
-This software had been carried out using MATLAB R2020a on a desktop computer with Intel(R) Xeon(R) E-2124G 3.40GHz and 32GB memory. The MATLAB function *refline* is required which is avaliable in Statistics Toolbox of MATLAB.
+This software had been carried out using MATLAB R2020a on a desktop computer with Intel(R) Xeon(R) E-2124G 3.40GHz and 32GB memory. The MATLAB function *refline* is required which is available in the Statistics Toolbox of MATLAB.
 
 
 ## Results
 
-1. The files in folder `NP_classification/results` show the results of comparison between  **CSA**, **YNW**, **PSG**, **APriD** and **SLPMM** for Neyman-Person classification.
+1. The files in folder `NP_classification/results` show the results of comparison between  **CSA**, **YNW**, **PSG**, **APriD** and **SLPMM** for Neyman-Pearson classification.
 - Figure 1 in the paper shows the results of comparison of algorithms on dataset *gisette*.
 - Figure 2 in the paper shows the results of comparison of algorithms on dataset *CINA*.
 - Figure 3 in the paper shows the results of comparison of algorithms on dataset *MNIST*.
 
-2. The files in folder `QCQP/results` show the results of comparison between   **YNW**, **PSG**, **APriD** and **SLPMM** for stochastic quadratically constrained quadratical programming.
-- Figure 4 in the paper shows the results of comparison of algorithms on stochastic quadratically constrained quadratical programming.
+2. The files in folder `QCQP/results` show the results of comparison between   **YNW**, **PSG**, **APriD** and **SLPMM** for stochastic quadratically constrained quadratic programming.
+- Figure 4 in the paper shows the results of comparison of algorithms on stochastic quadratically constrained quadratic programming.
 
 
 3. The files in folder `SSD/results` show the results of comparison between   **YNW**, **PSG**, **APriD**, **PALEM** and **SLPMM** for SSD constrained portfolio optimization.
