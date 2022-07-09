@@ -1,0 +1,7 @@
+maximize
+  avg_g(matrix_sde)
+Constraint: = 1
+  linear(matrix_budget)
+MultiConstraint: <= vector_ubound_sd
+  pm_pen(vector_benchmark_sd, matrix_sde)
+Box: >= 0, <= 1

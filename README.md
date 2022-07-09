@@ -1,24 +1,18 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# SLPMM
 
 This archive is distributed in association with the [INFORMS Journal on
-Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
+Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](https://github.com/INFORMSJoC/2021.0248/blob/master/LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0934) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+[Solving Stochastic Optimization with Expectation Constraints Efficiently by a Stochastic Augmented Lagrangian-Type Algorithm](https://doi.org/10.1287/ijoc.2021.0248) by L. Zhang, Y. Zhang, J. Wu and X. Xiao. 
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
 
 ## Cite
 
-To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI.
+To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2021.0248) using its DOI and the software itself, using the following DOI.
 
 [![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
 
@@ -26,79 +20,60 @@ Below is the BibTex for citing this version of the code.
 
 ```
 @article{CacheTest,
-  author =        {T. Ralphs},
+  author =        {Liwei Zhang, Yule Zhang, Jia Wu and Xiantao Xiao},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest} Version v1.0},
-  year =          {2020},
+  title =         {Solving Stochastic Optimization with Expectation Constraints Efficiently by a Stochastic Augmented {L}agrangian-Type Algorithm},
+  year =          {2022},
   doi =           {10.5281/zenodo.3977566},
-  url =           {https://github.com/INFORMSJoC/JoCTemplate},
+  url =           {https://github.com/INFORMSJoC/2021.0248},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+The goal of this software is to compare the performance of stochastic linearized proximal method of multipliers (**SLPMM**) proposed in the [paper](https://doi.org/10.1287/ijoc.2021.0248) with several existing algorithms for minimizing a convex expectation function subject to a set of inequality convex expectation constraints. Three numerical examples are tested: *Neyman-Person classification*, *stochastic quadratically constrained quadratical programming (QCQP)*, *second-order stochastic dominance (SSD)  constrained portfolio optimization*.
 
-## Building
+This software contains three folders: 'NP_classification', 'QCQP', 'SSD'. 
+- 'NP_classification': solves Neyman-Person classification problems.
+- 'QCQP': solves stochastic quadratically constrained quadratical programs.
+- 'SSD': solves second-order stochastic dominance (SSD)  constrained portfolio optimization problems.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+The tested existing algorithms include:
+- **CSA**: Lan G, Zhou Z (2020) Algorithms for stochastic optimization with function or expectation constraints.
+*Comput. Optim. Appl.* 76(2):461–498.
+- **YNW**: Yu H, Neely MJ, Wei X (2017) Online convex optimization with stochastic constraints. *Advances in Neural
+Information Processing Systems*, 1428–1438.
+- **PSG**: Xiao X (2019) Penalized stochastic gradient methods for stochastic convex optimization with expectation
+constraints, *optimization-online*.
+- **APriD**: Yan Y, Xu Y (2022) Adaptive primal-dual stochastic gradient method for expectation-constrained convex
+stochastic programs. *Math. Program. Comput.* 14(2):319–363.
+- **PALEM**: Dentcheva D, Martinez G, Wolfhagen E (2016) Augmented Lagrangian methods for solving optimization
+problems with stochastic-order constraints. *Oper. Res.*64(6):1451–1465.
 
-```
-make mult
-```
+This software had been carried out using MATLAB R2020a on a desktop computer with Intel(R) Xeon(R) E-2124G 3.40GHz and 32GB memory. The MATLAB function *refline* is required which is avaliable in Statistics Toolbox of MATLAB.
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+1. The files in folder 'NP_classification/results' show the results of comparison between  **CSA**, **YNW**, **PSG**, **APriD** and **SLPMM** for Neyman-Person classification.
+- Figure 1 in the paper shows the results of comparison of algorithms on dataset *gisette*.
+- Figure 2 in the paper shows the results of comparison of algorithms on dataset *CINA*.
+- Figure 3 in the paper shows the results of comparison of algorithms on dataset *MNIST*.
 
-![Figure 1](results/mult-test.png)
+2. The files in folder 'QCQP/results' show the results of comparison between   **YNW**, **PSG**, **APriD** and **SLPMM** for stochastic quadratically constrained quadratical programming.
+- Figure 4 in the paper shows the results of comparison of algorithms on stochastic quadratically constrained quadratical programming.
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
 
-![Figure 1](results/sum-test.png)
+3. The files in folder 'SSD/results' show the results of comparison between   **YNW**, **PSG**, **APriD**, **PALEM** and **SLPMM** for SSD constrained portfolio optimization.
+- Figure 5 in the paper shows the results of comparison of algorithms on SSD constrained portfolio optimization.
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+- To replicate the results in Figure 1-3, run the 'NP_classification/test_NP_classification_logloss.m' script.
+- To replicate the results in Figure 4, run the 'QCQP/test_QCQP.m' script.
+- To replicate the results in Figure 5, run the 'SSD/test_portfolio_SSD.m' script.
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
+## Remark
+ The elapsed cpu time of the experiments is much longer than that is shown in the figures (pure time of the algorithms). The reason is that we have to track the true values of objective and constraint functions at each iteration to show the performance of the algorithms, thus the code is very time-consuming.  Each pure time shown in the figures equals to the total time minus the time for computing  the true values of objective and constraint functions.
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
 
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
