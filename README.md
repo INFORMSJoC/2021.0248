@@ -45,15 +45,15 @@ This software contains three folders: `NP_classification`, `QCQP`, `SSD`.
 
 The tested existing algorithms include:
 - **CSA**: Lan G, Zhou Z (2020) Algorithms for stochastic optimization with function or expectation constraints.
-*Comput. Optim. Appl.* 76(2):461–498.
+*Comput. Optim. Appl.* 76(2):461–498. [link](https://doi.org/10.1007/s10589-020-00179-x)
 - **YNW**: Yu H, Neely MJ, Wei X (2017) Online convex optimization with stochastic constraints. *Advances in Neural
-Information Processing Systems*, 1428–1438.
+Information Processing Systems*, 1428–1438. [link](https://papers.nips.cc/paper/2017/hash/da0d1111d2dc5d489242e60ebcbaf988-Abstract.html)
 - **PSG**: Xiao X (2019) Penalized stochastic gradient methods for stochastic convex optimization with expectation
-constraints, *optimization-online*.
+constraints, *optimization-online*. [link](http://www.optimization-online.org/DB_HTML/2019/09/7364.html)
 - **APriD**: Yan Y, Xu Y (2022) Adaptive primal-dual stochastic gradient method for expectation-constrained convex
-stochastic programs. *Math. Program. Comput.* 14(2):319–363.
+stochastic programs. *Math. Program. Comput.* 14(2):319–363. [link](https://doi.org/10.1007/s12532-021-00214-w)
 - **PALEM**: Dentcheva D, Martinez G, Wolfhagen E (2016) Augmented Lagrangian methods for solving optimization
-problems with stochastic-order constraints. *Oper. Res.* 64(6):1451–1465.
+problems with stochastic-order constraints. *Oper. Res.* 64(6):1451–1465. [link](https://doi.org/10.1287/opre.2016.1521)
 
 This software had been carried out using MATLAB R2020a on a desktop computer with Intel(R) Xeon(R) E-2124G 3.40GHz and 32GB memory. The MATLAB function *refline* is required which is available in the Statistics Toolbox of MATLAB.
 
