@@ -22,7 +22,7 @@ Below is the BibTex for citing this version of the code.
 @article{SLPMM2022,
   author =        {Liwei Zhang, Yule Zhang, Jia Wu and Xiantao Xiao},
   publisher =     {INFORMS Journal on Computing},
-  title =         {Solving Stochastic Optimization with Expectation Constraints Efficiently by a Stochastic Augmented {L}agrangian-Type Algorithm},
+  title =         {{SLPMM} Version v2021.0248},
   year =          {2022},
   doi =           {10.5281/zenodo.3977566},
   url =           {https://github.com/INFORMSJoC/2021.0248},
