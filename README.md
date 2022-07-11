@@ -12,22 +12,8 @@ that were used in the research reported on in the paper
 
 ## Cite
 
-To cite this software, please cite the paper using its DOI and the software itself, using the following DOI.
+The final version of this repository, with updated bibliographical information, is available at [GitHub](https://github.com/INFORMSJoC/2021.0248).
 
-[![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
-
-Below is the BibTex for citing this version of the code.
-
-```
-@article{SLPMM2022,
-  author =        {Liwei Zhang, Yule Zhang, Jia Wu and Xiantao Xiao},
-  publisher =     {INFORMS Journal on Computing},
-  title =         {{SLPMM} Version v2021.0248},
-  year =          {2022},
-  doi =           {10.5281/zenodo.3977566},
-  url =           {https://github.com/INFORMSJoC/2021.0248},
-}  
-```
 
 ## Description
 
