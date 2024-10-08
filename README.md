@@ -12,9 +12,9 @@ that were used in the research reported on in the paper
 
 ## Cite
 
-To cite this material, please cite this repository, using the following DOI.
+To cite this material, please cite this repository, using the following DOI: [https://doi.org/10.1287/ijoc.2022.1228.cd](https://doi.org/10.1287/ijoc.2022.1228.cd)
 
-[![DOI](https://zenodo.org/badge/511862220.svg)](https://zenodo.org/badge/latestdoi/511862220)
+
 
 Below is the BibTex for citing this version of the code.
 
@@ -24,7 +24,7 @@ Below is the BibTex for citing this version of the code.
   publisher =     {INFORMS Journal on Computing},
   title =         {{SLPMM} Version v2021.0248},
   year =          {2022},
-  doi =           {10.5281/zenodo.6818229},
+  doi =           {10.1287/ijoc.2022.1228.cd},
   url =           {https://github.com/INFORMSJoC/2021.0248},
 }  
 ```
